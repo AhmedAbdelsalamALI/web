@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <style> .navbar-brand img {
+        margin-left: 30px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      
+      .navbar-nav {
+        text-align: center !important;
+      }
+      .navbtn {
+        background-color: #800000 !important;
+        color: #f5f5f5 !important;
+      }
+      .sign {
+        background-color: #800000 !important;
+        color: #f5f5f5 !important;
+        
+      }
+      .btn-l{
+        background-color: #973232!important;
+        margin-left: 5px;
+        margin-top: 1px;
+        color: #f5f5f5!important;
+        border-color: #800000;
+      }
+      .modal-title {
+        color: #800000 !important;
+        background-color: rgba(255, 255, 255, 0);
+      }
+      .modal-footer {
+        color: #800000;
+      }
+      .modal-footer button:hover {
+        background-color: #800000;
+        color: #ddd;
+      }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="assest/OIF.jpg" alt="" /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Menu</a></li>
+              <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="bestdishes.html">Best Dishes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li>
+                <button
+                  class="navbtn btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signUpModal"
+                >
+                  SignUp
+                </button>
+                <li>
+                  <button type="button" class="btn btn-l" data-bs-toggle="modal" data-bs-target="#loginModal" >
+                   Login
+                  </button>
+                </li>
+                
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+    
+  <div class="modal fade" id="signUpModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="signUpForm">
+            <div class="mb-3">
+              <label for="signup-username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="signup-username" required />
+            </div>
+            <div class="mb-3">
+              <label for="signup-email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="signup-email" required />
+            </div>
+            <div class="mb-3">
+              <label for="signup-password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signup-password" required />
+            </div>
+            <button type="submit" class="btn sign">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="login-email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="login-email" required />
+            </div>
+            <div class="mb-3">
+              <label for="login-password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="login-password" required />
+            </div>
+            <label>
+              <input type="checkbox" id="rememberMe" /> Remember Me
+            </label>
+            <br>
+            
+            <button type="submit" class="btn sign">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Checkout Section -->
+    <div class="container checkout-container">
+        <h2 class="text-center">Checkout</h2>
+        <form id="checkoutForm">
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="payment" class="form-label">Payment Method</label>
+                <select class="form-control" id="payment" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn checkout-btn">Confirm Order</button>
+        </form>
+    </div>
+    <footer class="footer">
+      <div class="footer-column">
+        <div class="logo">
+          <img src="assest/OIF.jpg" alt="Logo" />
+          <span>Bistro Bliss</span>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          vulputate consequat dui, ut aliquet nisi laoreet nec.
+        </p>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="index.html">Menu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Utility Pages</h4>
+        <ul>
+          <li><a href="#">Start Here</a></li>
+          <li><a href="#">Styleguide</a></li>
+        </ul>
+      </div>
+
+      <hr class="footer-line" />
+
+      <p class="footer-text">© 2025 Bistro Bliss. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

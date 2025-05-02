@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="assest/OIF.jpg" alt="" /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="bestdishes.html">Best Dishes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <button
+                class="navbtn btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#signUpModal"
+              >
+                SignUp
+              </button>
+              <li>
+                <button type="button" class="btn btn-l" data-bs-toggle="modal" data-bs-target="#loginModal" >
+                 Login
+                </button>
+              </li>
+              
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  
+<div class="modal fade" id="signUpModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="signUpForm">
+          <div class="mb-3">
+            <label for="signup-username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="signup-username" required />
+          </div>
+          <div class="mb-3">
+            <label for="signup-email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="signup-email" required />
+          </div>
+          <div class="mb-3">
+            <label for="signup-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signup-password" required />
+          </div>
+          <button type="submit" class="btn sign">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="login-email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="login-email" required />
+          </div>
+          <div class="mb-3">
+            <label for="login-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="login-password" required />
+          </div>
+          <label>
+            <input type="checkbox" id="rememberMe" /> Remember Me
+          </label>
+          <br>
+          
+          <button type="submit" class="btn sign">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <section class="hero-section">
+      <h1>
+        Best food for <br />
+        your taste
+      </h1>
+      <p>Discover the best meals and recipes curated just for you.</p>
+      <div class="btn-container">
+        <a href="#" class="btn btn-primary">Reservation</a>
+        <a href="#" class="btn btn-secondary">Explore Menu</a>
+      </div>
+    </section>
+
+    <div class="container mt-5">
+      <div
+        class="row card-container justify-content-center"
+        id="cards-container"
+      ></div>
+    </div>
+
+    <section class="third-section">
+      <div class="container">
+        <img src="./assest/pexels-elevate-1267320.jpg" alt="Chef Cooking" />
+        <div class="right-column">
+          <img src="./assest/pexels-chevanon-302899.jpg" alt="" />
+          <img src="./assest/pexels-photo-1031780.jpeg" alt="Grilled Meat" />
+        </div>
+      </div>
+      <div class="right-content">
+        <h2>
+          Fastest Food <br />
+          Delivery in City
+        </h2>
+        <p>
+          We ensure the fastest and most delicious food delivery in the city.<br />
+          Always fresh, always on time.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-column">
+        <div class="logo">
+          <img src="logo.jpg" alt="Logo" />
+          <span>Bistro Bliss</span>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+          vulputate consequat dui, ut aliquet nisi laoreet nec.
+        </p>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="index.html">Menu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Utility Pages</h4>
+        <ul>
+          <li><a href="#">Start Here</a></li>
+          <li><a href="#">Styleguide</a></li>
+        </ul>
+      </div>
+
+      <hr class="footer-line" />
+
+      <p class="footer-text">© 2025 Bistro Bliss. All rights reserved.</p>
+    </footer>
+
+    <script>
+    
+    document.getElementById("signUpForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const username = document.getElementById("signup-username").value;
+    const email = document.getElementById("signup-email").value;
+    const password = document.getElementById("signup-password").value;
+    localStorage.setItem("user", JSON.stringify({ username, email, password }));
+    alert("Account Created Successfully!");
+  });
+
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-password").value;
+  const rememberMe = document.getElementById("rememberMe").checked; 
+ 
+  const storedUser = JSON.parse(localStorage.getItem("user")) || JSON.parse(sessionStorage.getItem("user"));
+
+  if (storedUser && storedUser.email === email && storedUser.password === password) {
+    alert("Login Successful! Welcome, " + storedUser.username);
+    
+    
+    if (rememberMe) {
+      localStorage.setItem("user", JSON.stringify(storedUser));
+    } else {
+      sessionStorage.setItem("user", JSON.stringify(storedUser));
+    }
+    
+  } else {
+    alert("Invalid Email or Password");
+  }
+});
+
+
+      document.addEventListener("DOMContentLoaded", async function () {
+  const container = document.getElementById("cards-container");
+
+  async function fetchRandomMeal() {
+    try {
+      const response = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+      const data = await response.json();
+      return data.meals ? data.meals[0] : null;
+    } catch (error) {
+      console.error("Error fetching meals:", error);
+      return null;
+    }
+  }
+
+  const mealPromises = [fetchRandomMeal(), fetchRandomMeal(), fetchRandomMeal()];
+  const mealsData = await Promise.all(mealPromises);
+
+  mealsData.forEach((meal, index) => {
+    if (meal) {
+      const cardElement = document.createElement("div");
+      cardElement.className = "col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-4";
+      cardElement.innerHTML = `
+        <div class="card shadow" style="width: 100%;">
+            <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
+            <div class="card-body text-center">
+                <h5 class="card-title">${meal.strMeal}</h5>
+                <p class="card-text" id="card-text${index}">Delicious random meal.</p>
+                <button onclick="changeText(${index}, '${meal.strMeal} - A delicious surprise!')" class="btn card-btn">Know More</button>
+            </div>
+        </div>
+      `;
+      container.appendChild(cardElement);
+    }
+  });
+});
+
+function changeText(cardIndex, newText) {
+  document.getElementById(`card-text${cardIndex}`).innerText = newText;
+}
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <button id="chatbot-button" class="chatbot-btn">
+    💬
+</button>
+
+<div id="chatbot-container" class="chatbot-container">
+    <div class="chatbot-header">
+        <span>🍽️ شات بوت الوصفات</span>
+        <button id="close-chatbot">✖</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages">
+        <div class="bot-message">مرحبًا! 😊 ما الوصفة التي تبحث عنها اليوم؟</div>
+    </div>
+    <div class="chatbot-input">
+        <input type="text" id="chatbot-input" placeholder="اكتب سؤالك هنا..." />
+        <button id="send-message">📩</button>
+    </div>
+</div>
+</body>
+<script src="chatscript.js"></script>
+  </body>
+</html>
